@@ -1,7 +1,7 @@
 {
-  "name": "declarative-routing",
+  "name": "declarative-routing-mod",
   "version": "0.1.5",
-  "description": "Declarative routes for React",
+  "description": "Fork of declarative-routing",
   "bin": {
     "declarative-routing": "dist/index.js"
   },
@@ -20,14 +20,6 @@
     "test": "exit 1"
   },
   "keywords": [],
-  "author": {
-    "name": "Jack Herrington",
-    "email": "jherr@pobox.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ProNextJS/declarative-routing"
-  },
   "license": "MIT",
   "devDependencies": {
     "@types/diff": "^5.0.9",

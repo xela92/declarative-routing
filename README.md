@@ -1,3 +1,11 @@
+### This is a fork of https://github.com/ProNextJS/declarative-routing
+
+It contains minor changes to the code that avoid some bad routes from being generated.
+
+Also, the code is organized in a more maintainable way (IMHO).
+
+# Original README
+
 ## Declarative Routes
 
 `declarative-routing` sets up an optional declarative routing system for React projects. For NextJS, it maintains a global list of both pages and API routes and provides components and functions to easily navigate to pages, or make API requests.
