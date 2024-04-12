@@ -20,7 +20,6 @@ Instead of doing this:
 
 ```tsx
 import Link from 'next/link'
-
 ;<Link href={`/product/${product.id}`}>Product</Link>
 ```
 
@@ -28,7 +27,6 @@ You can do this:
 
 ```tsx
 import { ProductDetail } from '@/routes'
-
 ;<ProductDetail.Link productId={product.id}>Product</ProductDetail.Link>
 ```
 
