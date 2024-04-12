@@ -1,33 +1,33 @@
-import Handlebars from "handlebars";
-import fs from "fs-extra";
-import path from "path";
-import { fileURLToPath } from "url";
+import Handlebars from 'handlebars'
+import fs from 'fs-extra'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-const templates: Record<string, HandlebarsTemplateDelegate<any>> = {};
+const templates: Record<string, HandlebarsTemplateDelegate<any>> = {}
 
 export async function buildStringFromTemplate(
   templatePath: string,
-  data: unknown
+  data: unknown,
 ) {
   if (!templates[templatePath]) {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
+    const __filename = fileURLToPath(import.meta.url)
+    const __dirname = path.dirname(__filename)
     let contents = fs
       .readFileSync(path.resolve(__dirname, `../assets/${templatePath}`))
-      .toString();
+      .toString()
 
-    templates[templatePath] = Handlebars.compile(contents);
+    templates[templatePath] = Handlebars.compile(contents)
   }
-  return templates[templatePath](data);
+  return templates[templatePath](data)
 }
 
 export async function buildFileFromTemplate(
   templatePath: string,
   destinationPath: string,
-  data: unknown
+  data: unknown,
 ) {
   fs.writeFileSync(
     destinationPath,
-    await buildStringFromTemplate(templatePath, data)
-  );
+    await buildStringFromTemplate(templatePath, data),
+  )
 }
